@@ -54,4 +54,7 @@ dkms.conf
 
 .cache/
 .vagrant/
+boot/boot
+tools/build
+tools/system
 
