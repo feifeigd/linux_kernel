@@ -77,7 +77,7 @@ Vagrant.configure("2") do |config|
 	
     apt-get update
   #   apt-get install -y apache2
-	apt install -y bin86 cmake g++ nasm net-tools
+	apt install -y bin86 bximage cmake g++ nasm net-tools
 	#|/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E
   SHELL
 end
