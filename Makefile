@@ -13,6 +13,7 @@ CC = gcc
 CFLAGS = -Wall -O -fstrength-reduce -fomit-frame-pointer 
 CPP = gcc -E -nostdinc -Iinclude
 
+# 源后缀 -> 目标后缀
 .c.o:
 	$(CC) $(CFLAGS) -nostdinc -Iinclude -o $*.o $<
 
@@ -38,6 +39,7 @@ boot/boot: boot/boot.s tools/system
 	$(AS86) -o boot/boot.o $<
 	$(LD86) -s -o $@ boot/boot.o
 
+# 伪目标
 clean:
 	rm -f Image System.map tmp_make boot/boot core
 	rm -f init/*.o boot/*.o tools/build tools/system 
