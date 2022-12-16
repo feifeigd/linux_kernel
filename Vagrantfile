@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder ".", "/vagrant/linux"
   # config.vm.synced_folder "code/nvim", "/home/vagrant/.config/nvim"
 
   # Provider-specific configuration so you can fine-tune various
@@ -77,7 +77,7 @@ Vagrant.configure("2") do |config|
 	
     apt-get update
   #   apt-get install -y apache2
-	apt install -y bin86 bximage cmake g++ nasm net-tools
+	apt install -y bin86 build-essential bximage cmake g++ nasm net-tools
 	#|/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E
   SHELL
 end

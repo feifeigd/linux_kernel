@@ -68,6 +68,6 @@ int main(int argc, char** argv){
         if(len != write(1, buf, len))
             die("Write call failed");
     close(fd);
-    cerr << "System " << i << " bytes." << endl;
+    cerr << "System " << i << " bytes. " << (i + 15) / 16 << endl;
     return 0;
 }
