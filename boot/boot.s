@@ -35,7 +35,7 @@ begbss:
 BOOTSEG = 0x07c0; BIOS 加载启动扇区的原始段地址， 0x7c00物理地址
 INITSEG = 0x9000
 SYSSEG = 0x1000; system loaded at 0x10000(65536).
-SYSSIZE = 1; system的大小，按16字节对齐的单位
+SYSSIZE = 219; system的大小，按16字节对齐的单位
 ENDSEG = SYSSEG + SYSSIZE
 
 entry start; 程序入口点

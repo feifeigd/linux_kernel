@@ -45,9 +45,14 @@ clean:
 dep:
 	sed '/\#\#\# Dependencies/q' < Makefile > tmp_make
 	(for i in init/*.c; do echo -n "init/";$(CPP) -M $$i;done) >> tmp_make
+
+
+tools: tools/build tools/predef tools/system
+
 tools/build: tools/build.cpp
 	g++ $(CFLAGS) -o $@ $<
-
+tools/predef: tools/predef.cpp
+	g++ $(CFLAGS) -o $@ $<
 tools/system: init/main.o
 	$(LD) $(LDFLAGS) $^ $(ARCHIVES) $(LIBS) -o $@ > System.map
 
